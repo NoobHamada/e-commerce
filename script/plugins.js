@@ -1,8 +1,18 @@
 $(document).ready(function () {
-    let prodNames = [];
-
+    $("aside").click(function () {
+        $(this).children("span").toggle()
+        $("#cart").fadeToggle(300);
+    })
+    
+    
     $("button").click(function () {
-        prodNames += $(this).siblings(".prodName").text() + ' ';
-        $("#cart").text(prodNames)
+        $(this).children().animate({
+            top:'4px',
+            left:'0',
+            height:'20px',
+            width:'20px',
+        }, 200).fadeOut(2000).css({
+            backgroundColor: 'purple'
+        })
     })
 })

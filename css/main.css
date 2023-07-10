@@ -1,21 +1,14 @@
+::selection {
+    color: white;
+    background-color: purple;
+}
+
 body {
+    color: purple;
     display: grid;
     justify-content: center;
     font-size: larger;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-h2 {
-    background-color: gold;
-    text-align: center;
-    margin: auto;
-    cursor: pointer;
-    height: 30px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
 
 section {
@@ -41,9 +34,8 @@ button {
 }
 
 img {
-    margin: auto;
-    width: 200px;
-    height: 200px;
+    width: fit-content;
+    height: 12em;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -52,18 +44,53 @@ img {
 }
 
 aside {
+    z-index: 1;
+    cursor: pointer;
     position: fixed;
+    text-align: center;
     top: 0;
     left: 0;
-}
-
-#cart {
-    display: grid;
-    max-width: 70px;
-}
-
-#check {
-    margin-right: auto;
+    background-color: purple;
     color: white;
+    min-width: 80px;
+}
+
+#ttl {
+    position: fixed;
+    top: 0;
+    left: 80px;
+    height: 40px;
+    width: 100px;
+    color: white;
+    text-align: right;
+    background-color: purple;
+    border-radius: 0 0 10px 0;
+    -webkit-border-radius: 0 0 10px 0;
+    -moz-border-radius: 0 0 10px 0;
+    -ms-border-radius: 0 0 10px 0;
+    -o-border-radius: 0 0 10px 0;
+    padding-right: 15px;
+}
+
+ol {
+    display: none;
+    max-width: fit-content;
+}
+
+.ball {
+    z-index: 0;
+    height: 1px;
+    width: 1px;
     background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
 }
