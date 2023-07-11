@@ -1,7 +1,8 @@
 $(document).ready(function () {
     $("aside").click(function () {
-        $(this).children("span").toggle()
+        $(this).children("span").toggle();
         $("#cart").fadeToggle(300);
+        $("#ttl").toggleClass("pushed")
     })
     
     
