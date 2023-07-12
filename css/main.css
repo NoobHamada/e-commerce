@@ -67,13 +67,17 @@ aside {
     left: 0;
     background-color: purple;
     color: white;
-    min-width: 80px;
+    min-width: fit-content;
+}
+
+aside>span {
+    font-size: 35px;
 }
 
 #ttl {
     position: fixed;
     top: 0;
-    left: 80px;
+    left: 65px;
     height: 40px;
     width: 60px;
     color: white;
@@ -93,7 +97,7 @@ aside {
 }
 
 .pushed {
-    width: 250px !important;
+    width: 210px !important;
 }
 
 ol {
