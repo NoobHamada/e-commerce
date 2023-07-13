@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     }))
 
-
+    // Creating Ball (Start From [+] End At [Cart])
     $("button").on('click', (function () {
         $(this).children().animate({
             top: '4px',
@@ -18,7 +18,7 @@ $(document).ready(function () {
         })
     }))
 
-
+    // Check Over Selected Menu Filter
     $("select").on('change', function () {
         switch ($(this).val()) {
             case 'Fruit':

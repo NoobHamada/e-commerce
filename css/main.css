@@ -11,6 +11,11 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+h2 {
+    text-align: center;
+    margin: 50px 0;
+}
+
 select {
     text-align: center;
     color: white;
