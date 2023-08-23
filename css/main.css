@@ -31,9 +31,11 @@ h2 {
 }
 
 input {
+    text-align: center;
     margin: auto;
     background-color: white;
     border: none;
+    color: purple;
     border-bottom: 1px solid purple;
     border-left: 1px solid purple;
     border-radius: 4px;
@@ -48,7 +50,7 @@ select {
     text-align: center;
     color: white;
     background-color: purple;
-    border-color: purple;
+    border: none;
     max-width: 100px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
