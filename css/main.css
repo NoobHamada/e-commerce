@@ -30,6 +30,20 @@ h2 {
     margin: 50px 0;
 }
 
+input {
+    margin: auto;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid purple;
+    border-left: 1px solid purple;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
 select {
     text-align: center;
     color: white;
