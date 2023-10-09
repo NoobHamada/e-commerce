@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce</title>
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Template</title>
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
@@ -15,41 +15,21 @@
         <span>Cart</span>
         <ol id="cart"></ol>
     </aside>
-    <span id="ttl"></span>
-    
+    <span id="ttl">$$</span>
 
-    <!-- search-bar -->
-    <input id="searchBar" placeholder="write a specific product">
-    <input id="btn" type="button" value="search">
-    <br>
-    
+    <input id="searchBar" placeholder="write a specific product" />
+    <input id="btn" type="button" value="search" />
+    <br />
+
     <select>
         <option>All</option>
         <option>Fruit</option>
         <option>Vegetable</option>
     </select>
 
-    <section>
-        <div class="fruit"><img loading="lazy" src="imgs/apple.jpg"> <span class="prodName">Apple</span> <span class="price">10</span>
-            <button>+</button>
-        </div>
-        <div class="fruit"><img loading="lazy" src="imgs/kiwi.jpg"> <span class="prodName">Kiwi</span> <span class="price">5</span>
-            <button>+</button>
-        </div>
-        <div class="fruit"><img loading="lazy" src="imgs/orange.jpg"> <span class="prodName">Orange</span> <span class="price">10</span>
-            <button>+</button>
-        </div>
-        <div class="fruit"><img loading="lazy" src="imgs/strewberry.jpg"> <span class="prodName">Strewberries</span> <span class="price">15</span>
-            <button>+</button>
-        </div>
-        <div class="vegetable"><img loading="lazy" src="imgs/broccoli.jpg"> <span class="prodName">Broccoli</span> <span class="price">20</span>
-            <button>+</button>
-        </div>
-        <div class="vegetable"><img loading="lazy" src="imgs/eggplant.jpg"> <span class="prodName">Eggplant</span> <span class="price">5</span>
-            <button>+</button>
-        </div>
-    </section>
+    <section id="section"></section>
 
+    <script src="script/data.json"></script>
     <script src="script/vue.js"></script>
     <script src="script/jquery-3.7.0.min.js"></script>
     <script src="script/plugins.js"></script>

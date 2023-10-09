@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Apple",
+        "price": 10,
+        "img": "imgs/apple.jpg"
+    },
+    {
+        "name": "Kiwi",
+        "price": 5,
+        "img": "imgs/kiwi.jpg"
+    },
+    {
+        "name": "Orange",
+        "price": 10,
+        "img": "imgs/orange.jpg"
+    },
+    {
+        "name": "Strewberries",
+        "price": 15,
+        "img": "imgs/strewberry.jpg"
+    },
+    {
+        "name": "Broccoli",
+        "price": 20,
+        "img": "imgs/broccoli.jpg"
+    },
+    {
+        "name": "Eggplant",
+        "price": 5,
+        "img": "imgs/eggplant.jpg"
+    }
+]

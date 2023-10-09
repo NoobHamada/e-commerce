@@ -65,8 +65,8 @@ section {
     max-width: 400px;
     min-width: 375px;
     margin: auto;
-    text-align: center;
-    grid-template-columns: 200px 200px;
+    justify-content: center;
+    justify-items: center;
 }
 
 button {
@@ -75,17 +75,18 @@ button {
     width: 25px;
     font-weight: bolder;
     color: white;
-    background-color: black;
+    background-color: purple;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    margin-bottom: 60px;
 }
 
 img {
     width: fit-content;
-    max-width: 180px;
+    max-width: 200px;
     height: 12em;
     margin-top: 10px;
     border-radius: 10px;
