@@ -2,31 +2,37 @@
     {
         "name": "Apple",
         "price": 10,
-        "img": "imgs/apple.jpg"
+        "img": "imgs/apple.jpg",
+        "category": "fruit"
     },
     {
         "name": "Kiwi",
         "price": 5,
-        "img": "imgs/kiwi.jpg"
+        "img": "imgs/kiwi.jpg",
+        "category": "fruit"
     },
     {
         "name": "Orange",
         "price": 10,
-        "img": "imgs/orange.jpg"
+        "img": "imgs/orange.jpg",
+        "category": "fruit"
     },
     {
         "name": "Strewberries",
         "price": 15,
-        "img": "imgs/strewberry.jpg"
+        "img": "imgs/strewberry.jpg",
+        "category": "fruit"
     },
     {
         "name": "Broccoli",
         "price": 20,
-        "img": "imgs/broccoli.jpg"
+        "img": "imgs/broccoli.jpg",
+        "category": "vegetable"
     },
     {
         "name": "Eggplant",
         "price": 5,
-        "img": "imgs/eggplant.jpg"
+        "img": "imgs/eggplant.jpg",
+        "category": "vegetable"
     }
 ]
