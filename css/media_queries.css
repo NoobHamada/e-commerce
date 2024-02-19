@@ -1,0 +1,24 @@
+@media (min-width: 320px) {
+  section {
+    width: 300px;
+    grid-template-columns: 100%;
+  }
+}
+@media (min-width: 481px) {
+  section {
+    width: 450px;
+    grid-template-columns: 50% 50%;
+  }
+}
+@media (min-width: 769px) {
+  section {
+    width: 720px;
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+@media (min-width: 1025px) {
+  section {
+    width: 1000px;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}/*# sourceMappingURL=media_queries.css.map */
