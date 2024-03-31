@@ -22,6 +22,11 @@ request.onreadystatechange = function () {
             container.appendChild(image)
             container.appendChild(click)
             container.appendChild(staticPrice)
+
+            // SearchBar Menu After Typing Product's Name
+            let option = document.createElement('option')
+            document.getElementById('products-list-for-searchbar').appendChild(option)
+            option.innerText = object[i].name
         }
     }
 
