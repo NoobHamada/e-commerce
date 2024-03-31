@@ -6,8 +6,9 @@ request.onreadystatechange = function () {
 
         for (i = 0; i < object.length; i++) {
             let container = document.createElement('div')
-            container.className = object[i].category
+            container.classList.add(object[i].category)
             let name = document.createElement('div')
+            name.classList.add('prodName')
             name.innerText = object[i].name
             let image = document.createElement('img')
             image.setAttribute('src', object[i].img)
