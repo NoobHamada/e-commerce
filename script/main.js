@@ -37,15 +37,21 @@ request.onreadystatechange = function () {
     let ttl = document.getElementById("ttl");
 
     buttons.forEach(function (ele) {
-        ele.addEventListener('click', function () {
-            priceArr.push(+this.nextElementSibling.innerText)
-            temp += this.previousElementSibling.previousElementSibling.innerText
-            listFill();
+    ele.addEventListener('click', function () {
+        priceArr.push(+this.nextElementSibling.innerText)
+        temp += this.previousElementSibling.previousElementSibling.innerText
+        listFill();
 
-            let ball = document.createElement("div");
-            ball.classList = 'ball';
-            this.appendChild(ball);
-            price();
+        // Capture exactly where the clicked button sits on screen right now
+        let rect = this.getBoundingClientRect();
+
+        let ball = document.createElement("div");
+        ball.classList = 'ball';
+        ball.style.top = rect.top + 'px';
+        ball.style.left = rect.left + 'px';
+        this.appendChild(ball);
+
+        price();
         })
     })
 

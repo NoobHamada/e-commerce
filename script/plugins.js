@@ -7,7 +7,7 @@
     }))
 
     // Creating Ball (Start From [+] End At [Cart])
-    $("button").on('click', (function () {
+    $(document).on('click', 'button', function () {
         $(this).children().animate({
             top: '4px',
             left: '0',
@@ -15,8 +15,8 @@
             width: '20px',
         }, 200).fadeOut(2000).css({
             backgroundColor: 'purple'
-        })
-    }))
+        });
+    });
 
     // Check Over Selected Menu Filter
     $("select").on('change', function () {
