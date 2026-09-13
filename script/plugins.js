@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
     $("aside").on('click', (function () {
         $(this).children("span").toggle();
         $("#ttl").toggleClass("pushed");
@@ -35,4 +35,3 @@ $(document).ready(function () {
                 break;
         }
     })
-})

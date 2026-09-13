@@ -4,7 +4,7 @@ request.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
         let object = JSON.parse(this.responseText)
 
-        for (i = 0; i < object.length; i++) {
+        for (let i = 0; i < object.length; i++) {
             let container = document.createElement('div')
             container.classList.add(object[i].category)
             let name = document.createElement('div')
@@ -64,5 +64,14 @@ request.onreadystatechange = function () {
         ttl.innerText = calc;
     }
 }
+
+document.addEventListener('keydown', (e) => {
+  const typing = ['INPUT', 'SELECT', 'TEXTAREA'].includes(e.target.tagName);
+  if (typing) return; // don't hijack the search box
+  if (e.key.toLowerCase() === 'c') {
+    $('aside').trigger('click');
+  }
+});
+
 request.open('get', 'script/data.json', true);
 request.send()
