@@ -32,40 +32,57 @@ request.onreadystatechange = function () {
 
     // The Rest Of The Code
     let buttons = document.querySelectorAll("button");
-    let temp = '';
     let priceArr = [];
     let ttl = document.getElementById("ttl");
 
     buttons.forEach(function (ele) {
-    ele.addEventListener('click', function () {
-        priceArr.push(+this.nextElementSibling.innerText)
-        temp += this.previousElementSibling.previousElementSibling.innerText
-        listFill();
+        ele.addEventListener('click', function () {
+            let itemName = this.previousElementSibling.previousElementSibling.innerText;
+            let itemPrice = +this.nextElementSibling.innerText;
 
-        // Capture exactly where the clicked button sits on screen right now
-        let rect = this.getBoundingClientRect();
+            priceArr.push(itemPrice);
+            listFill(itemName, itemPrice);
 
-        let ball = document.createElement("div");
-        ball.classList = 'ball';
-        ball.style.top = rect.top + 'px';
-        ball.style.left = rect.left + 'px';
-        this.appendChild(ball);
+            // Capture exactly where the clicked button sits on screen right now
+            let rect = this.getBoundingClientRect();
 
-        price();
+            let ball = document.createElement("div");
+            ball.classList = 'ball';
+            ball.style.top = rect.top + 'px';
+            ball.style.left = rect.left + 'px';
+            this.appendChild(ball);
+
+            price();
         })
     })
 
-    function listFill() {
+    function listFill(name, itemPrice) {
         let li = document.createElement("li");
-        li.innerText = temp;
-        temp = '';
-        document.getElementById("cart").appendChild(li)
+
+        let nameSpan = document.createElement("span");
+        nameSpan.innerText = name;
+
+        let removeBtn = document.createElement("button");
+        removeBtn.innerText = "×";
+        removeBtn.classList.add("remove-item");
+        removeBtn.setAttribute('aria-label', `Remove ${name} from cart`);
+        removeBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            let idx = priceArr.indexOf(itemPrice);
+            if (idx > -1) priceArr.splice(idx, 1);
+            li.remove();
+            price();
+        });
+
+        li.appendChild(nameSpan);
+        li.appendChild(removeBtn);
+        document.getElementById("cart").appendChild(li);
     }
 
     function price() {
         let calc = priceArr.reduce(function (a, b) {
-            return a + b
-        })
+            return a + b;
+        }, 0);
 
         ttl.innerText = calc;
     }
@@ -74,7 +91,7 @@ request.onreadystatechange = function () {
 document.addEventListener('keydown', (e) => {
   const typing = ['INPUT', 'SELECT', 'TEXTAREA'].includes(e.target.tagName);
   if (typing) return; // don't hijack the search box
-  if (e.key.toLowerCase() === 'c') {
+  if (e.key.toLowerCase() === 'c' || e.key.toLowerCase() === 'ؤ') {
     $('aside').trigger('click');
   }
 });
